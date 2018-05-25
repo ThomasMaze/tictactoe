@@ -4,15 +4,13 @@ class Grid(object):
 
     GRID_SIZE = 9
 
-    empty = True
     cells = [0]*GRID_SIZE
 
     def isEmpty(self):
-        return self.empty
+        return self.cells.count(1) == 0
 
     def fillCell(self, cellId):
         self.cells[cellId] = 1
-        self.empty = False
 
     def representation(self):
         return self.cells
